@@ -1,0 +1,4 @@
+#!/bin/bash
+Xephyr -br -ac -noreset -screen 1600x900 :2 & 
+    sleep 0.5
+    DISPLAY=:2 awesome
