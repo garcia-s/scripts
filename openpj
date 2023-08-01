@@ -1,0 +1,24 @@
+#! /bin/bash
+
+folders=("$HOME/git" "$HOME/.config" "/opt/lampp/htdocs")
+if [ -z "$1" ]
+    then
+        echo "You to specify the project name";
+        exit
+fi
+
+for item in "${folders[@]}"
+    do
+        if [ -d "$item/$1" ] 
+         then
+            cd  "$item/$1" && nvim .
+            exit
+        fi
+done;
+echo "Your project was not found"
+
+
+
+
+
+
